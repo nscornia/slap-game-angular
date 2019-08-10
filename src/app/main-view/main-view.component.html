@@ -28,16 +28,16 @@
             alt="Handsome Jack"
             class="jack-image"
           />
-          <!-- 
-          <hero></hero>
+          <input type="text" class="form-control" [formControl]="search" />
+          <hero *ngIf="selectedHero" [hero]="selectedHero"></hero>
           <ng-select
-            [items]="heroes"
+            [items]="heroes$ | async"
             bindLabel="name"
             autofocus
             [(ngModel)]="selectedHero"
           >
-          </ng-select> -->
-          <h1>{{ selectedHero }}</h1>
+          </ng-select>
+          <h1 style="color:white">{{ selectedHero?.name }}</h1>
         </div>
         <div class="col-6 align-self-center">
           <span class="health-status">
@@ -67,7 +67,7 @@
           >
             The Guardian
           </button>
-          <button class="btn btn-warning"  (click)="addItem(items.shield)">
+          <button class="btn btn-warning" (click)="addItem(items.shield)">
             The Shield
           </button>
           <button class="btn btn-warning" (click)="addItem(items.doppelganger)">

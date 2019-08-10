@@ -5,6 +5,7 @@ export class Hero {
     public name: string,
     public health: number,
     public attacks: Action[],
-    public defenses: Action[]
+    public defenses: Action[],
+    public image: string
   ) {}
 }
