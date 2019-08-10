@@ -1,27 +1,31 @@
 # SlapGameAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+## Getting Started
 
-## Development server
+I have this project setup to use [Yarn](https://yarnpkg.com/en/) for the package manager. This is just an extension of npm. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To make sure you can use yarn install it globally with npm
+```
+npm install -g yarn
+```
+Now you can use yarn to build and serve the application
 
-## Code scaffolding
+## Install Dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In order to build or serve the application, the dependencies need to be downloaded and installed to this project. In order to do this run this command in the terminal
+```
+yarn
+```
 
-## Build
+## Running the  Development server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The development server should launch in a new tab in your broswer. In order to run the server, run this command in the terminal
+```
+yarn start
+```
 
-## Running unit tests
+## Angular Documentation Page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Go here first then just use their search, otherwise stackoverflow is always good
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[Angular](https://angular.io/)
