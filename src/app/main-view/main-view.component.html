@@ -1,0 +1,75 @@
+<div class="main container-fluid">
+  <div class="main container-fluid">
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col-4 image-container">
+          <img id="slapjack" src="./assets/SlapJack.png" />
+        </div>
+        <div class="col-4 text-rotate">
+          <h2>He has it coming.</h2>
+          <h2>Trust us.</h2>
+          <br />
+          <h1 id="game-name">SlapJack</h1>
+        </div>
+        <div class="col-4 image-container">
+          <img
+            id="logo"
+            src="assets/BorderlandsCrop.png"
+            alt="Borderlands Logo"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <img
+            src="assets/HandsomeJack.png"
+            alt="Handsome Jack"
+            class="jack-image"
+          />
+        </div>
+        <div class="col-6 align-self-center">
+          <span class="health-status">
+            <span class="name">
+              <h3>Name: Handsome Jack<span id="name" class="name"></span></h3>
+            </span>
+            <h3>Health: <span id="health" class="health-status">--</span></h3>
+            <span class="hits">
+              <h3>Hits: <span id="hit-status" class="hits"></span></h3>
+            </span>
+          </span>
+          <button
+            class="btn btn-warning"
+            onclick="goGuardian()"
+            id="guardianButton"
+          >
+            The Guardian
+          </button>
+          <button class="btn btn-warning" onclick="addItem(items.shield)">
+            The Shield
+          </button>
+          <button class="btn btn-warning" onclick="addItem(items.doppelganger)">
+            The Doppelganger
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="row">
+      <div class="col-6 align-items-center">
+        <button class="btn btn-warning" onclick="melee()" id="meleeButton">
+          Melee
+        </button>
+        <button class="btn btn-warning" onclick="shoot()" id="shootButton">
+          Shoot
+        </button>
+        <button class="btn btn-warning" onclick="slag()" id="slagButton">
+          Slag
+        </button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-info" onclick="respawn()">A New U</button>
+      </div>
+    </footer>
+  </div>
+</div>
