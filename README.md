@@ -19,10 +19,15 @@ yarn
 
 ## Running the  Development server
 
-The development server should launch in a new tab in your broswer. In order to run the server, run this command in the terminal
+The development server will show the application and watch any files in the project. If any of the files change, it will automatically rebuild the project with those changes and refresh the page in the browser.
+
+In order to run the server, run this command in the terminal
 ```
 yarn start
 ```
+
+Then go to this address in your browser
+(http://localhost:4200)
 
 ## Angular Documentation Page
 

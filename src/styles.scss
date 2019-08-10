@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+.main {
+  background: rgb(242, 165, 8);
+  background: radial-gradient(
+    circle,
+    rgba(242, 165, 8, 1) 0%,
+    rgba(103, 97, 97, 1) 38%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  font-family: "Anton", "Impact";
+  font-size: 4vh;
+}
+#game-name {
+  size: 2vh;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container > img {
+  background-size: contain;
+  width: 60%;
+  height: auto;
+}
+
+#logo {
+  height: 48vh;
+  width: auto;
+}
+
+.text-rotate {
+  transform: rotate(-30deg);
+}
+
+.jack-image {
+  border-radius: 20px;
+}
+
+.health-status {
+  color: rgba(242, 165, 8, 1);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
