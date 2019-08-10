@@ -28,28 +28,49 @@
             alt="Handsome Jack"
             class="jack-image"
           />
+          <!-- 
+          <hero></hero>
+          <ng-select
+            [items]="heroes"
+            bindLabel="name"
+            autofocus
+            [(ngModel)]="selectedHero"
+          >
+          </ng-select> -->
+          <h1>{{ selectedHero }}</h1>
         </div>
         <div class="col-6 align-self-center">
           <span class="health-status">
             <span class="name">
               <h3>Name: Handsome Jack<span id="name" class="name"></span></h3>
             </span>
-            <h3>Health: <span id="health" class="health-status">--</span></h3>
+            <h3>
+              Health:
+              <span id="health" class="health-status">{{ jack.health }}</span>
+            </h3>
             <span class="hits">
-              <h3>Hits: <span id="hit-status" class="hits"></span></h3>
+              <h3>
+                Hits: <span id="hit-status" class="hits">{{ jack.hits }}</span>
+              </h3>
+            </span>
+            <span class="">
+              <h3>
+                Defense: <span class="">{{ jack.defense.length }}</span>
+              </h3>
             </span>
           </span>
           <button
             class="btn btn-warning"
-            onclick="goGuardian()"
+            [disabled]="guardianUsed"
+            (click)="goGuardian()"
             id="guardianButton"
           >
             The Guardian
           </button>
-          <button class="btn btn-warning" onclick="addItem(items.shield)">
+          <button class="btn btn-warning"  (click)="addItem(items.shield)">
             The Shield
           </button>
-          <button class="btn btn-warning" onclick="addItem(items.doppelganger)">
+          <button class="btn btn-warning" (click)="addItem(items.doppelganger)">
             The Doppelganger
           </button>
         </div>
@@ -57,18 +78,33 @@
     </main>
     <footer class="row">
       <div class="col-6 align-items-center">
-        <button class="btn btn-warning" onclick="melee()" id="meleeButton">
+        <button
+          class="btn btn-warning"
+          (click)="melee()"
+          [disabled]="jack.health <= 0"
+          id="meleeButton"
+        >
           Melee
         </button>
-        <button class="btn btn-warning" onclick="shoot()" id="shootButton">
+        <button
+          class="btn btn-warning"
+          (click)="shoot()"
+          [disabled]="jack.health <= 0"
+          id="shootButton"
+        >
           Shoot
         </button>
-        <button class="btn btn-warning" onclick="slag()" id="slagButton">
+        <button
+          class="btn btn-warning"
+          (click)="slag()"
+          [disabled]="jack.health <= 0"
+          id="slagButton"
+        >
           Slag
         </button>
       </div>
       <div class="col-6">
-        <button class="btn btn-info" onclick="respawn()">A New U</button>
+        <button class="btn btn-info" (click)="respawn()">A New U</button>
       </div>
     </footer>
   </div>
